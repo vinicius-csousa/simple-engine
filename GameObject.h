@@ -3,6 +3,7 @@
 #include "IObject.h"
 #include "Transform.h"
 #include "SDL.h"
+#include "Point.h"
 
 struct Properties {
 public:
@@ -28,8 +29,11 @@ public:
 	virtual void Update(float dt = 0) = 0;
 	virtual void Clear() = 0;
 
+	inline Point* GetOrigin() { return m_Origin; }
+
 	GameObject(Properties* props) : m_Width(props->Width), m_Height(props->Height), m_TextureID(props->TextureID), m_Flip(props->Flip) {
 		m_Transform = new Transform(props->X, props->Y);
+		m_Origin = new Point(props->X + props->Width / 2, props->Y + props->Height / 2);
 	}
 
 protected:
@@ -37,6 +41,6 @@ protected:
 	int m_Width, m_Height;
 	std::string m_TextureID;
 	SDL_RendererFlip m_Flip;
-
+	Point* m_Origin;
 };
 

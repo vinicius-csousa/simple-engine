@@ -3,6 +3,9 @@
 #include "TextureManager.h"
 #include "Warrior.h"
 #include "Input.h"
+#include "Timer.h"
+#include "MapParser.h"
+#include "Camera.h"
 
 Engine* Engine::s_Instance = nullptr;
 Warrior* player = nullptr;
@@ -25,25 +28,37 @@ bool Engine::Init() {
 		return false;
 	}
 
-	TextureManager::GetInstance()->Load("tree", "assets/images/tree.png");
+	if (!MapParser::GetInstance()->Load()) {
+		SDL_Log("Failed to load map: %s", SDL_GetError());
+		//return false;
+	}
+
+	m_LevelMap = MapParser::GetInstance()->GetMap("map");
+
 	TextureManager::GetInstance()->Load("player_idle", "assets/images/characters/soldier/Idle.png");
 	TextureManager::GetInstance()->Load("player_run", "assets/images/characters/soldier/Run.png");
+	TextureManager::GetInstance()->Load("background", "assets/images/background.jpg");
 
 	player = new Warrior(new Properties("player_idle", 100, 320, 128, 128, SDL_FLIP_HORIZONTAL));
+
+	Camera::GetInstance()->SetTarget(player->GetOrigin());
 
 	return m_IsRunning = true;
 };
 
 void Engine::Update() {
-	player->Update(0);
+	float dt = Timer::GetInstance()->GetDeltaTime();
+	m_LevelMap->Update();
+	player->Update(dt);
+	Camera::GetInstance()->Update(dt);
 };
 
 void Engine::Render() {
 	SDL_SetRenderDrawColor(m_Renderer, 124, 218, 234, 255);
 	SDL_RenderClear(m_Renderer);
 
-	TextureManager::GetInstance()->Draw("tree", 100, 100, 750, 750);
-
+	TextureManager::GetInstance()->Draw("background", 0, -520, 1920, 1080);
+	m_LevelMap->Render();
 	player->Draw();
 
 	SDL_RenderPresent(m_Renderer);

@@ -31,10 +31,12 @@ void Warrior::Update(float dt) {
 
 	m_RigidBody->ApplyForceY(-9.81);
 
-	m_RigidBody->Update(1);
+	m_RigidBody->Update(dt);
 	m_Transform->TranslateX(m_RigidBody->GetPosition().X);
 	m_Transform->TranslateY(m_RigidBody->GetPosition().Y);
 
+	m_Origin->X = m_Transform->X + m_Width / 2;
+	m_Origin->Y = m_Transform->Y + m_Height / 2;
 	m_Animation->Update();
 }
 

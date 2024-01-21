@@ -2,6 +2,7 @@
 
 #include "SDL.h"
 #include "SDL_image.h"
+#include "GameMap.h"
 
 #define SCREEN_WIDTH 960
 #define SCREEN_HEIGHT 640
@@ -28,6 +29,7 @@ private:
 	static Engine* s_Instance;
 	bool m_IsRunning;
 	
+	GameMap* m_LevelMap;
 	SDL_Window* m_Window;
 	SDL_Renderer* m_Renderer;
 
