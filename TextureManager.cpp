@@ -23,11 +23,35 @@ bool TextureManager::Load(std::string id, std::string filename) {
 	return true;
 }
 
-void TextureManager::Draw(std::string id, int x, int y, int width, int height, SDL_RendererFlip flip) {
-	Vector2D cam = Camera::GetInstance()->GetPosition()*0.5;
+bool TextureManager::ParseTextures(std::string source) {
+
+	TiXmlDocument xml;
+	xml.LoadFile(source);
+
+	if (xml.Error()) {
+		std::cout << "Failed to open " << source << std::endl;
+		return false;
+	}
+
+	TiXmlElement* root = xml.RootElement();
+	for (TiXmlElement* e = root->FirstChildElement(); e != nullptr; e = e->NextSiblingElement()) {
+		if (e->Value() == std::string("texture")) {
+			std::string id = e->Attribute("id");
+			std::string src = e->Attribute("source");
+			Load(id, src);
+		}
+	}
+
+	std::cout << "Textures parsed successfully" << std::endl;
+
+	return true;
+}
+
+void TextureManager::Draw(std::string id, int x, int y, int width, int height, float xScale, float yScale, float scrollRatio, SDL_RendererFlip flip) {
+	Vector2D cam = Camera::GetInstance()->GetPosition() * scrollRatio;
 
 	SDL_Rect srcRect = { 0, 0, width, height };
-	SDL_Rect dstRect = { x - cam.X, y - cam.Y, width, height };
+	SDL_Rect dstRect = { x - cam.X, y, width*xScale, height*yScale };
 	SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), m_TextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
 }
 
@@ -35,7 +59,7 @@ void TextureManager::DrawTile(std::string tilesetID, int tileSize, int x, int y,
 	Vector2D cam = Camera::GetInstance()->GetPosition();
 
 	SDL_Rect srcRect = { tileSize * frame, tileSize * row, tileSize, tileSize };
-	SDL_Rect dstRect = { x - cam.X, y - cam.Y, tileSize, tileSize };
+	SDL_Rect dstRect = { x - cam.X, y, tileSize, tileSize };
 	SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), m_TextureMap[tilesetID], &srcRect, &dstRect, 0, 0, flip);
 }
 
@@ -43,7 +67,7 @@ void TextureManager::DrawFrame(std::string id, int x, int y, int width, int heig
 	Vector2D cam = Camera::GetInstance()->GetPosition();
 
 	SDL_Rect srcRect = { width*frame, height*row, width, height };
-	SDL_Rect dstRect = { x - cam.X, y - cam.Y, width, height };
+	SDL_Rect dstRect = { x - cam.X, y, width, height };
 	SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), m_TextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
 }
 

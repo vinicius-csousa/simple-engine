@@ -3,6 +3,8 @@
 #include "SDL.h"
 #include "Engine.h"
 
+enum Axis {HORIZONTAL, VERTICAL};
+
 class Input
 {
 
@@ -13,6 +15,7 @@ public:
 
 	void Listen();
 	bool GetKeyDown(SDL_Scancode key);
+	int GetAxisKey(Axis axis);
 
 private:
 	Input();

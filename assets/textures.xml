@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<textures>
+    <texture id="player" source="assets/images/characters/viking/viking_ice_axe.png"/>
+
+    <texture id="background" source="assets/images/background.jpg"/>
+
+    <texture id="demon_idle_1" source="assets/images/enemies/01_demon_idle/demon_idle_1.png"/>
+    <texture id="demon_idle_2" source="assets/images/enemies/01_demon_idle/demon_idle_2.png"/>
+    <texture id="demon_idle_3" source="assets/images/enemies/01_demon_idle/demon_idle_3.png"/>
+    <texture id="demon_idle_4" source="assets/images/enemies/01_demon_idle/demon_idle_4.png"/>
+    <texture id="demon_idle_5" source="assets/images/enemies/01_demon_idle/demon_idle_5.png"/>
+    <texture id="demon_idle_6" source="assets/images/enemies/01_demon_idle/demon_idle_6.png"/>
+
+    <texture id="demon_walk_1" source="assets/images/enemies/02_demon_walk/demon_walk_1.png"/>
+    <texture id="demon_walk_2" source="assets/images/enemies/02_demon_walk/demon_walk_2.png"/>
+    <texture id="demon_walk_3" source="assets/images/enemies/02_demon_walk/demon_walk_3.png"/>
+    <texture id="demon_walk_4" source="assets/images/enemies/02_demon_walk/demon_walk_4.png"/>
+    <texture id="demon_walk_5" source="assets/images/enemies/02_demon_walk/demon_walk_5.png"/>
+    <texture id="demon_walk_6" source="assets/images/enemies/02_demon_walk/demon_walk_6.png"/>
+    <texture id="demon_walk_7" source="assets/images/enemies/02_demon_walk/demon_walk_7.png"/>
+    <texture id="demon_walk_8" source="assets/images/enemies/02_demon_walk/demon_walk_8.png"/>
+    <texture id="demon_walk_9" source="assets/images/enemies/02_demon_walk/demon_walk_9.png"/>
+    <texture id="demon_walk_10" source="assets/images/enemies/02_demon_walk/demon_walk_10.png"/>
+    <texture id="demon_walk_11" source="assets/images/enemies/02_demon_walk/demon_walk_11.png"/>
+    <texture id="demon_walk_12" source="assets/images/enemies/02_demon_walk/demon_walk_12.png"/>
+
+    <texture id="demon_cleave_1" source="assets/images/enemies/03_demon_cleave/demon_cleave_1.png"/>
+    <texture id="demon_cleave_2" source="assets/images/enemies/03_demon_cleave/demon_cleave_2.png"/>
+    <texture id="demon_cleave_3" source="assets/images/enemies/03_demon_cleave/demon_cleave_3.png"/>
+    <texture id="demon_cleave_4" source="assets/images/enemies/03_demon_cleave/demon_cleave_4.png"/>
+    <texture id="demon_cleave_5" source="assets/images/enemies/03_demon_cleave/demon_cleave_5.png"/>
+    <texture id="demon_cleave_6" source="assets/images/enemies/03_demon_cleave/demon_cleave_6.png"/>
+    <texture id="demon_cleave_7" source="assets/images/enemies/03_demon_cleave/demon_cleave_7.png"/>
+    <texture id="demon_cleave_8" source="assets/images/enemies/03_demon_cleave/demon_cleave_8.png"/>
+    <texture id="demon_cleave_9" source="assets/images/enemies/03_demon_cleave/demon_cleave_9.png"/>
+    <texture id="demon_cleave_10" source="assets/images/enemies/03_demon_cleave/demon_cleave_10.png"/>
+    <texture id="demon_cleave_11" source="assets/images/enemies/03_demon_cleave/demon_cleave_11.png"/>
+    <texture id="demon_cleave_12" source="assets/images/enemies/03_demon_cleave/demon_cleave_12.png"/>
+    <texture id="demon_cleave_13" source="assets/images/enemies/03_demon_cleave/demon_cleave_13.png"/>
+    <texture id="demon_cleave_14" source="assets/images/enemies/03_demon_cleave/demon_cleave_14.png"/>
+    <texture id="demon_cleave_15" source="assets/images/enemies/03_demon_cleave/demon_cleave_15.png"/>
+
+    <texture id="demon_take_hit_1" source="assets/images/enemies/04_demon_take_hit/demon_take_hit_1.png"/>
+    <texture id="demon_take_hit_2" source="assets/images/enemies/04_demon_take_hit/demon_take_hit_2.png"/>
+    <texture id="demon_take_hit_3" source="assets/images/enemies/04_demon_take_hit/demon_take_hit_3.png"/>
+    <texture id="demon_take_hit_4" source="assets/images/enemies/04_demon_take_hit/demon_take_hit_4.png"/>
+    <texture id="demon_take_hit_5" source="assets/images/enemies/04_demon_take_hit/demon_take_hit_5.png"/>
+
+    <texture id="demon_death_1" source="assets/images/enemies/05_demon_death/demon_death_1.png"/>
+    <texture id="demon_death_2" source="assets/images/enemies/05_demon_death/demon_death_2.png"/>
+    <texture id="demon_death_3" source="assets/images/enemies/05_demon_death/demon_death_3.png"/>
+    <texture id="demon_death_4" source="assets/images/enemies/05_demon_death/demon_death_4.png"/>
+    <texture id="demon_death_5" source="assets/images/enemies/05_demon_death/demon_death_5.png"/>
+    <texture id="demon_death_6" source="assets/images/enemies/05_demon_death/demon_death_6.png"/>
+    <texture id="demon_death_7" source="assets/images/enemies/05_demon_death/demon_death_7.png"/>
+    <texture id="demon_death_8" source="assets/images/enemies/05_demon_death/demon_death_8.png"/>
+    <texture id="demon_death_9" source="assets/images/enemies/05_demon_death/demon_death_9.png"/>
+    <texture id="demon_death_10" source="assets/images/enemies/05_demon_death/demon_death_10.png"/>
+    <texture id="demon_death_11" source="assets/images/enemies/05_demon_death/demon_death_11.png"/>
+    <texture id="demon_death_12" source="assets/images/enemies/05_demon_death/demon_death_12.png"/>
+    <texture id="demon_death_13" source="assets/images/enemies/05_demon_death/demon_death_13.png"/>
+    <texture id="demon_death_14" source="assets/images/enemies/05_demon_death/demon_death_14.png"/>
+    <texture id="demon_death_15" source="assets/images/enemies/05_demon_death/demon_death_15.png"/>
+    <texture id="demon_death_16" source="assets/images/enemies/05_demon_death/demon_death_16.png"/>
+    <texture id="demon_death_17" source="assets/images/enemies/05_demon_death/demon_death_17.png"/>
+    <texture id="demon_death_18" source="assets/images/enemies/05_demon_death/demon_death_18.png"/>
+    <texture id="demon_death_19" source="assets/images/enemies/05_demon_death/demon_death_19.png"/>
+    <texture id="demon_death_20" source="assets/images/enemies/05_demon_death/demon_death_20.png"/>
+    <texture id="demon_death_21" source="assets/images/enemies/05_demon_death/demon_death_21.png"/>
+    <texture id="demon_death_22" source="assets/images/enemies/05_demon_death/demon_death_22.png"/>
+    
+</textures>

@@ -30,6 +30,7 @@ public:
 	virtual void Clear() = 0;
 
 	inline Point* GetOrigin() { return m_Origin; }
+	inline void SetDistToPlayer(float dist) { m_DistToPlayer = dist; }
 
 	GameObject(Properties* props) : m_Width(props->Width), m_Height(props->Height), m_TextureID(props->TextureID), m_Flip(props->Flip) {
 		m_Transform = new Transform(props->X, props->Y);
@@ -42,5 +43,6 @@ protected:
 	std::string m_TextureID;
 	SDL_RendererFlip m_Flip;
 	Point* m_Origin;
+	float m_DistToPlayer;
 };
 

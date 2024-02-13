@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animations>
+    <sequence id="demon_idle" frameCount="6" speed="100" width="288" height="160">
+        <frame textureID="demon_idle_1"/>
+        <frame textureID="demon_idle_2"/>
+        <frame textureID="demon_idle_3"/>
+        <frame textureID="demon_idle_4"/>
+        <frame textureID="demon_idle_5"/>
+        <frame textureID="demon_idle_6"/>
+    </sequence>
+
+    <sequence id="demon_walk" frameCount="12" speed="80" width="288" height="160">
+        <frame textureID="demon_walk_1"/>
+        <frame textureID="demon_walk_2"/>
+        <frame textureID="demon_walk_3"/>
+        <frame textureID="demon_walk_4"/>
+        <frame textureID="demon_walk_5"/>
+        <frame textureID="demon_walk_6"/>
+        <frame textureID="demon_walk_7"/>
+        <frame textureID="demon_walk_8"/>
+        <frame textureID="demon_walk_9"/>
+        <frame textureID="demon_walk_10"/>
+        <frame textureID="demon_walk_11"/>
+        <frame textureID="demon_walk_12"/>
+    </sequence>
+
+    <sequence id="demon_cleave" frameCount="15" speed="80" width="288" height="160">
+        <frame textureID="demon_cleave_1"/>
+        <frame textureID="demon_cleave_2"/>
+        <frame textureID="demon_cleave_3"/>
+        <frame textureID="demon_cleave_4"/>
+        <frame textureID="demon_cleave_5"/>
+        <frame textureID="demon_cleave_6"/>
+        <frame textureID="demon_cleave_7"/>
+        <frame textureID="demon_cleave_8"/>
+        <frame textureID="demon_cleave_9"/>
+        <frame textureID="demon_cleave_10"/>
+        <frame textureID="demon_cleave_11"/>
+        <frame textureID="demon_cleave_12"/>
+        <frame textureID="demon_cleave_13"/>
+        <frame textureID="demon_cleave_14"/>
+        <frame textureID="demon_cleave_15"/>
+    </sequence>
+
+    <sequence id="demon_take_hit" frameCount="5" speed="100" width="288" height="160">
+        <frame textureID="demon_take_hit_1"/>
+        <frame textureID="demon_take_hit_2"/>
+        <frame textureID="demon_take_hit_3"/>
+        <frame textureID="demon_take_hit_4"/>
+        <frame textureID="demon_take_hit_5"/>
+    </sequence>
+
+    <sequence id="demon_death" frameCount="20" speed="80" width="288" height="160">
+        <frame textureID="demon_death_1"/>
+        <frame textureID="demon_death_2"/>
+        <frame textureID="demon_death_3"/>
+        <frame textureID="demon_death_4"/>
+        <frame textureID="demon_death_5"/>
+        <frame textureID="demon_death_6"/>
+        <frame textureID="demon_death_7"/>
+        <frame textureID="demon_death_8"/>
+        <frame textureID="demon_death_9"/>
+        <frame textureID="demon_death_10"/>
+        <frame textureID="demon_death_11"/>
+        <frame textureID="demon_death_12"/>
+        <frame textureID="demon_death_13"/>
+        <frame textureID="demon_death_14"/>
+        <frame textureID="demon_death_15"/>
+        <frame textureID="demon_death_16"/>
+        <frame textureID="demon_death_17"/>
+        <frame textureID="demon_death_18"/>
+        <frame textureID="demon_death_19"/>
+        <frame textureID="demon_death_20"/>
+        <frame textureID="demon_death_21"/>
+        <frame textureID="demon_death_22"/>
+    </sequence>
+
+</animations>
